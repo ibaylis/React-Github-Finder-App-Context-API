@@ -3,9 +3,15 @@ import UserItem from './UserItem';
 import Spinner from '../layout/Spinner';
 import PropTypes from 'prop-types';
 
+const userStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gridGap: '1rem'
+}
+
 const Users = ({ users, loading }) => {
 
-        if(loading) {
+        if (loading) {
             return <Spinner />
         } else {
             return (
@@ -19,11 +25,6 @@ const Users = ({ users, loading }) => {
 
     }
 
-const userStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridGap: '1rem'
-}
 
 Users.propTypes = {
     users: PropTypes.array.isRequired,
