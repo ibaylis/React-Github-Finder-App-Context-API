@@ -3,11 +3,7 @@ import UserItem from './UserItem';
 import Spinner from '../layout/Spinner';
 import GithubContext from '../../context/github/githubContext';
 
-const userStyle =  {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gridGap: '1rem'
-}
+
 
 const Users = () => {
     const githubContext = useContext(GithubContext);
@@ -25,6 +21,12 @@ const Users = () => {
                 </div>
             );
         }
+    };
 
+    const userStyle =  {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gridGap: '1rem'
     }
+
 export default Users;

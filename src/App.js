@@ -13,12 +13,12 @@ import AlertState from './context/alert/AlertState';
 import './App.css';
 
 const App = () => {
-        return (
-            <GithubState>
-                <AlertState>
+    return (
+        <GithubState>
+            <AlertState>
                 <Router>
                     <div className='App'>
-                        <Navbar title='Github Finder' icon='fab fa-github' />
+                        <Navbar />
                         <div className='container'>
                             <Alert />
                             <Switch>
@@ -30,9 +30,8 @@ const App = () => {
                         </div>
                     </div>
                 </Router>
-                </AlertState>
-            </GithubState>
- 
+            </AlertState>
+        </GithubState>
         );
 }
 
